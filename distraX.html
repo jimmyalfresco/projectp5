@@ -1,0 +1,296 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>DistraX - Digital Wellness App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    /* Splash screen styles */
+    #splash {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb); /* Gradient background */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1000;
+      opacity: 1;
+      animation: fadeOut 3s forwards; /* Trigger fade-out animation */
+    }
+
+    /* Main content hidden initially */
+    #main-content {
+      display: none; /* Hidden until splash ends */
+    }
+
+    /* Fade-out animation for splash screen */
+    @keyframes fadeOut {
+      0% {
+        opacity: 1;
+      }
+      80% {
+        opacity: 0.1;
+      }
+      100% {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+  </style>
+</head>
+<body class="font-roboto bg-white text-gray-800">
+  <!-- Splash Screen -->
+  <div id="splash">
+    <img src="DistraX.png" alt="DistraX Logo" class="h-40">
+  </div>
+
+  <!-- Main Content -->
+  <div id="main-content">
+    <header class="bg-blue-900 text-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold">DistraX</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li><a class="hover:text-yellow-300" href="#home">Home</a></li>
+            <li><a class="hover:text-yellow-300" href="#features">Features</a></li>
+            <li><a class="hover:text-yellow-300" href="#education">Education</a></li>
+            <li><a class="hover:text-yellow-300" href="#settings">Settings</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section class="bg-blue-100 py-12" id="home">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Welcome to DistraX</h2>
+        <p class="mt-4 text-lg text-gray-700">Manage your screen time, set priorities, and stay educated with our app.</p>
+        <img alt="Illustration of a person managing their screen time on various devices" class="mx-auto mt-8" height="400" src="https://storage.googleapis.com/a1aa/image/kgi89w9sle0DKKC4gvf5KiCMRWRooUeex41p6NzwUBYlSOcPB.jpg" width="600">
+      </div>
+    </section>
+
+    <section class="py-12" id="features">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-clock text-4xl text-green-500"></i>
+            <h3 class="text-xl font-bold mt-4"><a class="hover:text-yellow-300" href="#digital-detox">Digital Detox</a></h3>
+            <p class="mt-2 text-gray-600">Take breaks from your devices and enjoy a healthier lifestyle.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-tasks text-4xl text-yellow-500"></i>
+            <h3 class="text-xl font-bold mt-4"><a class="hover:text-yellow-300" href="#set-priorities">Set Priorities</a></h3>
+            <p class="mt-2 text-gray-600">Organize your activities and focus on what matters most.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-coins text-4xl text-blue-500"></i>
+            <h3 class="text-xl font-bold mt-4"><a class="hover:text-yellow-300" href="#poinx">PoinX</a></h3>
+            <p class="mt-2 text-gray-600">Participate in activities and earn points that can be exchanged for rewards.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12" id="education">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Education</h2>
+        <p class="mt-4 text-lg text-gray-700">Join seminars, read books, consult with professionals, and enjoy entertainment content.</p>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Seminar in progress" class="mx-auto" height="200" src="https://storage.googleapis.com/a1aa/image/VXwVVm39GvaHARoecm8Jhh7qa2Yk3GG2HbrYsWVeY3rskD3TA.jpg" width="300"/>
+            <h3 class="text-xl font-bold mt-4">Digital Wellness Seminar</h3>
+            <p class="mt-2 text-gray-600">Learn about the importance of digital detox and how to implement it in your life.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Book cover" class="mx-auto" height="200" src="https://storage.googleapis.com/a1aa/image/5VH7HHOmp3J6BZMsyhAL32flHng0h6n82UnN1r6YOnMTyh7JA.jpg" width="300"/>
+            <h3 class="text-xl font-bold mt-4">Read Books</h3>
+            <p class="mt-2 text-gray-600">Access a library of books focused on digital wellness and productivity.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Consultation image" class="mx-auto" height="200" src="https://storage.googleapis.com/a1aa/image/Fxqx3VGimkIONtwwdPI6gf5fVUcGVIiaSmXDSLWehrZVJHunA.jpg" width="300"/>
+            <h3 class="text-xl font-bold mt-4">Consult</h3>
+            <p class="mt-2 text-gray-600">Consult with professionals for advice on improving your digital wellness.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img alt="Person enjoying entertainment content" class="mx-auto" height="200" src="https://storage.googleapis.com/a1aa/image/MGFFcBjGRSapFVE4LZrp8dnqNeWSjUfmjCNRKeg5nR6RJHunA.jpg" width="300"/>
+            <h3 class="text-xl font-bold mt-4">Entertainment</h3>
+            <p class="mt-2 text-gray-600">Enjoy a variety of entertainment content to relax and unwind.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-100 py-12" id="settings">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Settings</h2>
+        <p class="mt-4 text-lg text-gray-700">Customize your experience and manage your account settings.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-user-cog text-4xl text-green-500"></i>
+            <h3 class="text-xl font-bold mt-4">Account Settings</h3>
+            <p class="mt-2 text-gray-600">Manage your personal information and preferences.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-bell text-4xl text-yellow-500"></i>
+            <h3 class="text-xl font-bold mt-4">Notifications</h3>
+            <p class="mt-2 text-gray-600">Set your notification preferences and stay updated.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg">
+            <i class="fas fa-language text-4xl text-blue-500"></i>
+            <h3 class="text-xl font-bold mt-4">Language</h3>
+            <p class="mt-2 text-gray-600">Choose your preferred language for the app interface.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg col-span-1 md:col-span-1 mx-auto">
+            <i class="fas fa-shield-alt text-4xl text-purple-500"></i>
+            <h3 class="text-xl font-bold mt-4">Privacy</h3>
+            <p class="mt-2 text-gray-600">Manage your privacy settings and data preferences.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg col-span-1 md:col-span-1 mx-auto">
+            <i class="fas fa-lock text-4xl text-red-500"></i>
+            <h3 class="text-xl font-bold mt-4">Lock Device</h3>
+            <p class="mt-2 text-gray-600">Lock your device to prevent unauthorized access.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-blue-50" id="digital-detox">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Digital Detox</h2>
+        <div class="bg-white p-6 rounded-lg mt-8 shadow-lg">
+          <h4 class="text-lg font-bold text-green-500">Daily Time</h4>
+          <p class="text-gray-600">Set daily screen time limits (0-24 hours).</p>
+          <input class="mt-2 p-2 border rounded w-full" max="24" min="0" type="number"/>
+        </div>
+        <div class="bg-white p-6 rounded-lg mt-4 shadow-lg">
+          <h4 class="text-lg font-bold text-yellow-500">Downtime</h4>
+          <p class="text-gray-600">Schedule downtime to disconnect.</p>
+          <div class="flex justify-between items-center mt-2">
+            <label class="mr-2" for="downtime-start">Start:</label>
+            <input class="p-2 border rounded" id="downtime-start" type="time"/>
+            <label class="mx-2" for="downtime-end">End:</label>
+            <input class="p-2 border rounded" id="downtime-end" type="time"/>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg mt-4 shadow-lg">
+          <h4 class="text-lg font-bold text-blue-500">Apps Settings</h4>
+          <p class="text-gray-600">Manage app-specific settings.</p>
+          <div class="flex items-center mt-2">
+            <input class="mr-2" id="instagram" type="checkbox"/>
+            <label for="instagram">Instagram</label>
+          </div>
+          <div class="flex items-center mt-2">
+            <input class="mr-2" id="facebook" type="checkbox"/>
+            <label for="facebook">Facebook</label>
+          </div>
+          <div class="flex items-center mt-2">
+            <input class="mr-2" id="whatsapp" type="checkbox"/>
+            <label for="whatsapp">WhatsApp</label>
+          </div>
+          <div class="flex items-center mt-2">
+            <input class="mr-2" id="x" type="checkbox"/>
+            <label for="x">X</label>
+          </div>
+          <div class="flex items-center mt-2">
+            <input class="mr-2" id="youtube" type="checkbox"/>
+            <label for="youtube">YouTube</label>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg mt-4 shadow-lg">
+          <h4 class="text-lg font-bold text-red-500">Devices</h4>
+          <p class="text-gray-600">Monitor and control multiple devices.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-blue-50" id="set-priorities">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">Set Priorities</h2>
+        <div class="bg-white p-6 rounded-lg mt-8 shadow-lg">
+          <h4 class="text-lg font-bold text-yellow-500">Rundown</h4>
+          <p class="text-gray-600">Organize your daily activities.</p>
+          <div class="mt-4">
+            <div class="flex items-center mt-2">
+              <input class="mr-2" type="checkbox"/>
+              <label>Morning Exercise</label>
+            </div>
+            <div class="flex items-center mt-2">
+              <input class="mr-2" type="checkbox"/>
+              <label>Work on Project</label>
+            </div>
+            <div class="flex items-center mt-2">
+              <input class="mr-2" type="checkbox"/>
+              <label>Read a Book</label>
+            </div>
+            <div class="flex items-center mt-2">
+              <input class="mr-2" type="checkbox"/>
+              <label>Family Time</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-blue-50" id="poinx">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-900">PoinX</h2>
+        <div class="bg-white p-6 rounded-lg mt-8 shadow-lg">
+          <h4 class="text-lg font-bold text-blue-500">Tasks</h4>
+          <p class="text-gray-600">Complete tasks to earn points.</p>
+          <div class="mt-4">
+            <div class="flex justify-between items-center mt-2">
+              <span>Read a Book</span>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Do it now</button>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span>Exercise</span>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Do it now</button>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span>Complete a Project</span>
+              <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Do it now</button>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg mt-4 shadow-lg">
+          <h4 class="text-lg font-bold text-blue-500">Claim Points</h4>
+          <p class="text-gray-600">Claim your points after completing tasks.</p>
+          <div class="mt-4">
+            <div class="flex justify-between items-center mt-2">
+              <span>Read a Book</span>
+              <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Claim +5 Points</button>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span>Exercise</span>
+              <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Claim +10 Points</button>
+            </div>
+            <div class="flex justify-between items-center mt-2">
+              <span>Complete a Project</span>
+              <button class="bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">Claim +20 Points</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-blue-900 text-white py-4">
+      <div class="container mx-auto text-center">
+        <p>© 2023 DistraX. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Show main content after fade-out animation completes
+    setTimeout(() => {
+      document.getElementById('main-content').style.display = 'block';
+    }, 3000); // Matches the duration of the animation
+  </script>
+</body>
+</html>
